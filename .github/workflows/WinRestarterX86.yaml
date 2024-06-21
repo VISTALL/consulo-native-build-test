@@ -1,0 +1,24 @@
+name: WinRestarterX86
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: windows-2022
+    defaults:
+      run:
+        working-directory: ./native/WinRestarter/
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: threeal/cmake-action@main
+      with:
+        generator: Visual Studio 17 2022
+        source-dir: ./native/WinRestarter
+        build-dir: ./native/WinRestarter/build
+        options: TARGET_X64=0 TARGET_ARM64=0
