@@ -1,4 +1,4 @@
-name: WinRestarterX64
+name: WinRestarterARM64
 
 on:
   push:
