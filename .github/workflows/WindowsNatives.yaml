@@ -37,10 +37,11 @@ jobs:
         source-dir: ./native/WinRestarter
         build-dir: ./native/WinRestarter/build
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=1
+        build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         name: restarter-aarch64.exe
-        path: ./native/WinRestarter/build/Debug/restarter-aarch64.exe
+        path: ./native/WinRestarter/build/Release/restarter-aarch64.exe
 
     - run: git reset --hard
     - uses: threeal/cmake-action@main
@@ -49,7 +50,8 @@ jobs:
         source-dir: ./native/WinRestarter
         build-dir: ./native/WinRestarter/build
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=0
+        build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         name: restarter.exe
-        path: ./native/WinRestarter/build/Debug/restarter.exe
+        path: ./native/WinRestarter/build/Release/restarter.exe
