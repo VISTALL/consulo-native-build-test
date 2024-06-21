@@ -26,10 +26,9 @@ jobs:
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=1
     - uses: actions/upload-artifact@v4
       with:
-        path: ./native/WinRestarter/Release/restarter64.exe
+        path: ./native/WinRestarter/Debug/restarter64.exe
 
     - run: git reset --hard
-    - uses: nicksnell/action-reset-repo@master
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
@@ -38,10 +37,9 @@ jobs:
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=1
     - uses: actions/upload-artifact@v4
       with:
-        path: ./native/WinRestarter/Release/restarter64.exe
+        path: ./native/WinRestarter/Debug/restarter64.exe
 
     - run: git reset --hard
-    - uses: nicksnell/action-reset-repo@master
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
@@ -50,4 +48,4 @@ jobs:
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=0
     - uses: actions/upload-artifact@v4
       with:
-        path: ./native/WinRestarter/Release/restarter-aarch64.exe
+        path: ./native/WinRestarter/Debug/restarter-aarch64.exe
