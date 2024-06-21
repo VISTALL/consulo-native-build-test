@@ -21,5 +21,4 @@ jobs:
         generator: Visual Studio 17 2022
         source-dir: ./native/WinRestarter
         build-dir: ./native/WinRestarter/build
-        options: TARGET_X64=0
-        options: TARGET_ARM64=1
+        options: TARGET_X64=0 TARGET_ARM64=1
