@@ -17,7 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Windows Restarter X64
     - uses: nicksnell/action-reset-repo@master
     - uses: threeal/cmake-action@main
       with:
@@ -29,7 +28,6 @@ jobs:
       with:
         path: ./native/WinRestarter/Release/restarter64.exe
 
-    - name: Windows Restarter ARM64
     - uses: nicksnell/action-reset-repo@master
     - uses: threeal/cmake-action@main
       with:
@@ -41,7 +39,6 @@ jobs:
       with:
         path: ./native/WinRestarter/Release/restarter64.exe
 
-    - name: Windows Restarter X86
     - uses: nicksnell/action-reset-repo@master
     - uses: threeal/cmake-action@main
       with:
