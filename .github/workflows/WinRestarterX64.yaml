@@ -19,4 +19,5 @@ jobs:
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
+        source-dir: ./native/WinRestarter
         build-dir: ./native/WinRestarter/build 
