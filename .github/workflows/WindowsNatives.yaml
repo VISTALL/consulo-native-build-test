@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: nicksnell/action-reset-repo@master
+    - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
@@ -28,6 +28,7 @@ jobs:
       with:
         path: ./native/WinRestarter/Release/restarter64.exe
 
+    - run: git reset --hard
     - uses: nicksnell/action-reset-repo@master
     - uses: threeal/cmake-action@main
       with:
@@ -39,6 +40,7 @@ jobs:
       with:
         path: ./native/WinRestarter/Release/restarter64.exe
 
+    - run: git reset --hard
     - uses: nicksnell/action-reset-repo@master
     - uses: threeal/cmake-action@main
       with:
