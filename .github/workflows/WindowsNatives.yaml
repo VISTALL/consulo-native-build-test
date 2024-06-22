@@ -102,4 +102,47 @@ jobs:
         name: runnerw.exe
         path: ./native/WinRunner/build/Release/runnerw.exe
         if-no-files-found: error
+############################ WinLoaderLibrary ############################
+# WinLoaderLibrary X64
+    - run: git reset --hard
+    - uses: threeal/cmake-action@main
+      with:
+        generator: Visual Studio 17 2022
+        source-dir: ./native/WinLoaderLibrary
+        build-dir: ./native/WinLoaderLibrary/build
+        options: CMAKE_BUILD_TYPE=Release TARGET_X64=1
+        build-args:  --config Release
+    - uses: actions/upload-artifact@v4
+      with:
+        name: runnerw64.exe
+        path: ./native/WinLoaderLibrary/build/Release/consulo64.dll
+        if-no-files-found: error
+# WinLoaderLibrary X86
+    - run: git reset --hard
+    - uses: threeal/cmake-action@main
+      with:
+        generator: Visual Studio 17 2022
+        source-dir: ./native/WinLoaderLibrary
+        build-dir: ./native/WinLoaderLibrary/build
+        options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=1
+        build-args:  --config Release
+    - uses: actions/upload-artifact@v4
+      with:
+        name: runnerw-aarch64.exe
+        path: ./native/WinLoaderLibrary/build/Release/consulo-aarch64.dll
+        if-no-files-found: error
+# WinLoaderLibrary ARM64
+    - run: git reset --hard
+    - uses: threeal/cmake-action@main
+      with:
+        generator: Visual Studio 17 2022
+        source-dir: ./native/WinLoaderLibrary
+        build-dir: ./native/WinLoaderLibrary/build
+        options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=0
+        build-args:  --config Release
+    - uses: actions/upload-artifact@v4
+      with:
+        name: runnerw.exe
+        path: ./native/WinLoaderLibrary/build/Release/consulo.dll
+        if-no-files-found: error
 
