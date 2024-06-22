@@ -18,74 +18,80 @@ jobs:
     - uses: actions/checkout@v4
 ############################ WindowsRestarter ############################
 # WindowsRestarter X64
+    - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
         source-dir: ./native/WinRestarter
         build-dir: ./native/WinRestarter/build 
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=1
-        build-args: clean
+        build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         path: ./native/WinRestarter/Release/restarter64.exe
         if-no-files-found: error
 # WindowsRestarter X86
+    - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
         source-dir: ./native/WinRestarter
         build-dir: ./native/WinRestarter/build
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=1
-        build-args: clean
+        build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         path: ./native/WinRestarter/Release/restarter-aarch64.exe
         if-no-files-found: error
 # WindowsRestarter ARM64
+    - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
         source-dir: ./native/WinRestarter
         build-dir: ./native/WinRestarter/build
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=0
-        build-args: clean
+        build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         path: ./native/WinRestarter/Release/restarter.exe
         if-no-files-found: error
 ############################ WinRunner ############################
 # WinRunner X64
+    - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
         source-dir: ./native/WinRestarter
         build-dir: ./native/WinRestarter/build
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=1
-        build-args: clean
+        build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         path: ./native/WinRunner/Release/runnerw64.exe
         if-no-files-found: error
 # WinRunner X86
+    - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
         source-dir: ./native/WinRestarter
         build-dir: ./native/WinRestarter/build
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=1
-        build-args: clean
+        build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         path: ./native/WinRunner/Release/runnerw-aarch64.exe
         if-no-files-found: error
 # WinRunner ARM64
+    - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
         source-dir: ./native/WinRestarter
         build-dir: ./native/WinRestarter/build
         options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=0
-        build-args: clean
+        build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         path: ./native/WinRunner/Release/runnerw.exe
