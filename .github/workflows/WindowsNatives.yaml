@@ -114,12 +114,12 @@ jobs:
         generator: Visual Studio 17 2022
         source-dir: ./native/WinLoaderLibrary
         build-dir: ./native/WinLoaderLibrary/build
-        options: CMAKE_BUILD_TYPE=Release TARGET_X64=1
+        options: CMAKE_BUILD_TYPE=Release TARGET_X64=1 JDK_18_x64=$JAVA_HOME
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         name: runnerw64.exe
-        path: ./native/WinLoaderLibrary/build/Release/consulo64.dll
+        path: ./native/WinLoaderLibrary/build/Release/consulo64.dll 
         if-no-files-found: error
 # WinLoaderLibrary X86
     - run: git reset --hard
@@ -128,7 +128,7 @@ jobs:
         generator: Visual Studio 17 2022
         source-dir: ./native/WinLoaderLibrary
         build-dir: ./native/WinLoaderLibrary/build
-        options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=1
+        options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=1 JDK_AARCH64=$JAVA_HOME
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
@@ -142,7 +142,7 @@ jobs:
         generator: Visual Studio 17 2022
         source-dir: ./native/WinLoaderLibrary
         build-dir: ./native/WinLoaderLibrary/build
-        options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=0
+        options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=0 JDK_18=$JAVA_HOME
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
