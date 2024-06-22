@@ -28,7 +28,7 @@ jobs:
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
-        path: ./native/WinRestarter/Release/restarter64.exe
+        path: ./native/WinRestarter/build/Release/restarter64.exe
         if-no-files-found: error
 # WindowsRestarter X86
     - run: git reset --hard
@@ -41,7 +41,7 @@ jobs:
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
-        path: ./native/WinRestarter/Release/restarter-aarch64.exe
+        path: ./native/WinRestarter/build/Release/restarter-aarch64.exe
         if-no-files-found: error
 # WindowsRestarter ARM64
     - run: git reset --hard
@@ -54,7 +54,7 @@ jobs:
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
-        path: ./native/WinRestarter/Release/restarter.exe
+        path: ./native/WinRestarter/build/Release/restarter.exe
         if-no-files-found: error
 ############################ WinRunner ############################
 # WinRunner X64
@@ -68,7 +68,7 @@ jobs:
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
-        path: ./native/WinRunner/Release/runnerw64.exe
+        path: ./native/WinRunner/build/Release/runnerw64.exe
         if-no-files-found: error
 # WinRunner X86
     - run: git reset --hard
@@ -81,7 +81,7 @@ jobs:
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
-        path: ./native/WinRunner/Release/runnerw-aarch64.exe
+        path: ./native/WinRunner/build/Release/runnerw-aarch64.exe
         if-no-files-found: error
 # WinRunner ARM64
     - run: git reset --hard
@@ -94,6 +94,6 @@ jobs:
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
-        path: ./native/WinRunner/Release/runnerw.exe
+        path: ./native/WinRunner/build/Release/runnerw.exe
         if-no-files-found: error
 
