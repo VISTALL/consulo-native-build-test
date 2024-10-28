@@ -1,4 +1,4 @@
-## Languages
+### Languages
 | Name | Parsing | Resolving | Completion | Inspections |
 |  --------  |  -------  | ------- | -------| ------ |
 | Java | 🟢 | 🟢 |🟢 |🟢 
@@ -9,14 +9,14 @@
 | SQL | 🔵 | 🔴 | 🔴 | 🔴
 | Dart |🟢 | 🟢 | 🟢 | 🟢
 
-## Language Frameworks 
+### Language Frameworks 
 | Name | Support |
 |  ------- | ------- |
 | Java ▸ Spring | 🔵 ([incubating](https://github.com/consulo/incubating-consulo-spring))
 | Java ▸ Hibernate | 🔴 ([planned but delayed](https://github.com/consulo/incubating-consulo-hibernate))
 | Java ▸ JPA | 🔴 (planned but delayed)
 
-## Runtime Platforms
+### Runtime Platforms
 | Name  | Importing | Running | Debugging |
 |  --------  |  -------  | ------- | -------|
 | Java | Maven 🟢 / Gradle 🟢 | 🟢 |🟢 
