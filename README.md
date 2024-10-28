@@ -7,6 +7,7 @@
 | PHP| 🔵 | 🔵 | 🔵 | 🔴
 | Ruby| 🔵 | 🔴 | 🔴 | 🔴
 | SQL | 🔵 | 🔴 | 🔴 | 🔴
+| Dart |🔵 | 🔵 | 🔵 | 🔵
 
 ## Language Frameworks 
 | Name | Support |
@@ -24,6 +25,7 @@
 | .NET (.NET Core) | MSBuild 🟢 | 🟢 | 🔴
 | Unity |  🟢 | 🟢 | 🟢
 | PHP | 🔵 | 🔵 | 🔴
+| Node.js | 🔵 | 🔵 | 🔴
 
 Legend 
   - 🟢 - fully supported
