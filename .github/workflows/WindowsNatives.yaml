@@ -118,7 +118,7 @@ jobs:
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
-        name: runnerw64.exe
+        name: consulo64.exe
         path: ./native/WinLoader/build/Release/consulo64.exe
         if-no-files-found: error
 # WinLoader ARM64
@@ -132,7 +132,7 @@ jobs:
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
-        name: runnerw-aarch64.exe
+        name: consulo-aarch64.exe
         path: ./native/WinLoader/build/Release/consulo-aarch64.exe
         if-no-files-found: error
 # WinLoader X86
@@ -146,6 +146,6 @@ jobs:
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
-        name: runnerw.exe
+        name: consulo.exe
         path: ./native/WinLoader/build/Release/consulo.exe
         if-no-files-found: error
