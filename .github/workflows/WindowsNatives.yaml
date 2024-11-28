@@ -78,7 +78,7 @@ jobs:
         name: runnerw64.exe
         path: ./native/WinRunner/build/Release/runnerw64.exe
         if-no-files-found: error
-# WinRunner X86
+# WinRunner ARM64
     - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
@@ -92,7 +92,7 @@ jobs:
         name: runnerw-aarch64.exe
         path: ./native/WinRunner/build/Release/runnerw-aarch64.exe
         if-no-files-found: error
-# WinRunner ARM64
+# WinRunner X86
     - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
@@ -106,47 +106,46 @@ jobs:
         name: runnerw.exe
         path: ./native/WinRunner/build/Release/runnerw.exe
         if-no-files-found: error
-############################ WinLoaderLibrary ############################
-# WinLoaderLibrary X64
+############################ WinLoader ############################
+# WinLoader X64
     - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
-        source-dir: ./native/WinLoaderLibrary
-        build-dir: ./native/WinLoaderLibrary/build
-        options: CMAKE_BUILD_TYPE=Release TARGET_X64=1 JDK_18_x64=$env:JAVA_HOME
+        source-dir: ./native/WinLoader
+        build-dir: ./native/WinLoader/build
+        options: CMAKE_BUILD_TYPE=Release TARGET_X64=1
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         name: runnerw64.exe
-        path: ./native/WinLoaderLibrary/build/Release/consulo64.dll 
+        path: ./native/WinLoader/build/Release/consulo64.exe
         if-no-files-found: error
-# WinLoaderLibrary X86
+# WinLoader ARM64
     - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
-        source-dir: ./native/WinLoaderLibrary
-        build-dir: ./native/WinLoaderLibrary/build
-        options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=1 JDK_AARCH64=$env:JAVA_HOME
+        source-dir: ./native/WinLoader
+        build-dir: ./native/WinLoader/build
+        options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=1
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         name: runnerw-aarch64.exe
-        path: ./native/WinLoaderLibrary/build/Release/consulo-aarch64.dll
+        path: ./native/WinLoader/build/Release/consulo-aarch64.exe
         if-no-files-found: error
-# WinLoaderLibrary ARM64
+# WinLoader X86
     - run: git reset --hard
     - uses: threeal/cmake-action@main
       with:
         generator: Visual Studio 17 2022
-        source-dir: ./native/WinLoaderLibrary
-        build-dir: ./native/WinLoaderLibrary/build
-        options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=0 JDK_18$env:JAVA_HOME
+        source-dir: ./native/WinLoader
+        build-dir: ./native/WinLoader/build
+        options: CMAKE_BUILD_TYPE=Release TARGET_X64=0 TARGET_ARM64=0
         build-args:  --config Release
     - uses: actions/upload-artifact@v4
       with:
         name: runnerw.exe
-        path: ./native/WinLoaderLibrary/build/Release/consulo.dll
+        path: ./native/WinLoader/build/Release/consulo.exe
         if-no-files-found: error
-
