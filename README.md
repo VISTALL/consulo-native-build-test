@@ -32,3 +32,6 @@ Legend
   - 🟢 - fully supported
   - 🔵 - partial support
   - 🔴 - not supported
+
+Push dialog test from Consulo (AWT) - 2026-10-18T00:14:19+03:00
+amended line 00:15:52
