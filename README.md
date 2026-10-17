@@ -33,3 +33,4 @@ Legend
   - 🔵 - partial support
   - 🔴 - not supported
 multi push test repo-a 00:27:36
+sync edit test 00:36:46
