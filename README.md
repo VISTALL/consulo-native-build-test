@@ -7,7 +7,7 @@
 | PHP| 🔵 | 🔵 | 🔵 | 🔴
 | Ruby| 🔵 | 🔴 | 🔴 | 🔴
 | SQL | 🔵 | 🔴 | 🔴 | 🔴
-| Dart |🟢 | 🟢 | 🟢 | 🟢
+| Dart |🟢 | 🟢 | 🟢 | 🔴
 
 
 ### Language Frameworks 
